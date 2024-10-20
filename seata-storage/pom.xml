@@ -6,7 +6,14 @@
     <artifactId>seata-storage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>seata-storage</name>
-    <description>seata-storage</description>
+    <description>库存模块</description>
+
+    <properties>
+        <application.name>seata-storage</application.name>
+    </properties>
+
+
+
     <parent>
         <groupId>com.zy</groupId>
         <artifactId>seatashow</artifactId>
@@ -40,6 +47,17 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!--   dubbo   -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
         </dependency>
 
         <!--    bootstrap     -->
