@@ -6,11 +6,10 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: nacos://localhost:8848
+    address: nacos://127.0.0.1:8848
     parameters:
       namespace: 734593a8-2edb-42a1-a03d-6ec39076ae1e
       group: SEATA_CLIENT
-
   application:
     name: ${spring.application.name}
     qos-enable: true
