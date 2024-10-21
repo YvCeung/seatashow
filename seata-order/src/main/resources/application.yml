@@ -1,14 +1,3 @@
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-        namespace: 734593a8-2edb-42a1-a03d-6ec39076ae1e
-        group: SEATA_CLIENT
-      config:
-        server-addr: 127.0.0.1:8848
-        file-extension: properties
-        name: ${spring.application.name}
 dubbo:
   consumer:
     timeout: 3000
@@ -17,8 +6,9 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: nacos://localhost:8848
+    address: nacos://121.41.177.228:8848
   application:
     name: ${spring.application.name}
     qos-enable: true
     qos-accept-foreign-ip: false
+
