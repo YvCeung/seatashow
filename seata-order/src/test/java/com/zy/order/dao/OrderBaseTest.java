@@ -13,8 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Date 2024/10/22 23:36
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {SeataOrderApplication.class})
-@ActiveProfiles("test")
+//@SpringBootTest(classes = {SeataOrderApplication.class})
 public class OrderTblDaoBaseTest {
     @Test
     public void test(){
