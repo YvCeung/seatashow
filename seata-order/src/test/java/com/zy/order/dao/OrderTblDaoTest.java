@@ -1,6 +1,6 @@
 package com.zy.order.dao;
 
-import com.zy.order.entity.OrderTbl;
+import com.zy.common.bo.OrderTblDO;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Author zy
  * @Date 2024/10/22 23:28
  **/
-public class OrderTblDaoTest {
+public class OrderTblDaoTest extends OrderBaseTest {
 
     @Autowired
     private OrderTblDao orderTblDao;
     @Test
     public void test11(){
-        OrderTbl orderTbl = orderTblDao.queryById(1);
-        System.out.println(orderTbl.getId());
+        OrderTblDO orderTblDO = orderTblDao.queryById(1);
+        System.out.println(orderTblDO.getUserId());
     }
 }

@@ -1,20 +1,23 @@
 package com.zy.order.service.impl;
 
-import com.zy.order.entity.OrderTbl;
+import com.zy.common.bo.OrderTblDO;
 import com.zy.order.dao.OrderTblDao;
-import com.zy.order.service.OrderTblService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.zy.common.service.OrderTblService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Service;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * (OrderTbl)表服务实现类
  *
- * @author makejava
- * @since 2024-10-22 23:18:44
+ * @author xiaoyuer
+ * @since 2024-10-23 22:48:18
  */
-@Service("orderTblService")
+@DubboService
 public class OrderTblServiceImpl implements OrderTblService {
+
     @Autowired
     private OrderTblDao orderTblDao;
 
@@ -25,33 +28,32 @@ public class OrderTblServiceImpl implements OrderTblService {
      * @return 实例对象
      */
     @Override
-    public OrderTbl queryById(Integer id) {
+    public OrderTblDO queryById(Integer id) {
         return this.orderTblDao.queryById(id);
     }
-
 
     /**
      * 新增数据
      *
-     * @param orderTbl 实例对象
+     * @param orderTblDO 实例对象
      * @return 实例对象
      */
     @Override
-    public OrderTbl insert(OrderTbl orderTbl) {
-        this.orderTblDao.insert(orderTbl);
-        return orderTbl;
+    public OrderTblDO createOrder(OrderTblDO orderTblDO) {
+        this.orderTblDao.insert(orderTblDO);
+        return orderTblDO;
     }
 
     /**
      * 修改数据
      *
-     * @param orderTbl 实例对象
+     * @param orderTblDO 实例对象
      * @return 实例对象
      */
     @Override
-    public OrderTbl update(OrderTbl orderTbl) {
-        this.orderTblDao.update(orderTbl);
-        return this.queryById(orderTbl.getId());
+    public OrderTblDO update(OrderTblDO orderTblDO) {
+        this.orderTblDao.update(orderTblDO);
+        return this.queryById(orderTblDO.getId());
     }
 
     /**

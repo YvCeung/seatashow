@@ -1,19 +1,17 @@
-package com.zy.order.dao;
+package com.zy.storage.dao;
 
-import com.zy.common.bo.OrderTblDO;
-import org.apache.ibatis.annotations.Mapper;
+import com.zy.common.bo.StockTblDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 /**
- * (OrderTbl)表数据库访问层
+ * (StockTbl)表数据库访问层
  *
  * @author xiaoyuer
- * @since 2024-10-23 22:48:16
+ * @since 2024-10-23 22:54:04
  */
-@Mapper
-public interface OrderTblDao {
+public interface StockTblDao {
 
     /**
      * 通过ID查询单条数据
@@ -21,48 +19,48 @@ public interface OrderTblDao {
      * @param id 主键
      * @return 实例对象
      */
-    OrderTblDO queryById(Integer id);
+    StockTblDO queryById(Integer id);
 
     /**
      * 统计总行数
      *
-     * @param orderTblDO 查询条件
+     * @param stockTblDO 查询条件
      * @return 总行数
      */
-    long count(OrderTblDO orderTblDO);
+    long count(StockTblDO stockTblDO);
 
     /**
      * 新增数据
      *
-     * @param orderTblDO 实例对象
+     * @param stockTblDO 实例对象
      * @return 影响行数
      */
-    int insert(OrderTblDO orderTblDO);
+    int insert(StockTblDO stockTblDO);
 
     /**
      * 批量新增数据（MyBatis原生foreach方法）
      *
-     * @param entities List<OrderTbl> 实例对象列表
+     * @param entities List<StockTbl> 实例对象列表
      * @return 影响行数
      */
-    int insertBatch(@Param("entities") List<OrderTblDO> entities);
+    int insertBatch(@Param("entities") List<StockTblDO> entities);
 
     /**
      * 批量新增或按主键更新数据（MyBatis原生foreach方法）
      *
-     * @param entities List<OrderTblDO> 实例对象列表
+     * @param entities List<StockTblDO> 实例对象列表
      * @return 影响行数
      * @throws org.springframework.jdbc.BadSqlGrammarException 入参是空List的时候会抛SQL语句错误的异常，请自行校验入参
      */
-    int insertOrUpdateBatch(@Param("entities") List<OrderTblDO> entities);
+    int insertOrUpdateBatch(@Param("entities") List<StockTblDO> entities);
 
     /**
      * 修改数据
      *
-     * @param orderTblDO 实例对象
+     * @param stockTblDO 实例对象
      * @return 影响行数
      */
-    int update(OrderTblDO orderTblDO);
+    int update(StockTblDO stockTblDO);
 
     /**
      * 通过主键删除数据
@@ -72,5 +70,8 @@ public interface OrderTblDao {
      */
     int deleteById(Integer id);
 
+    void reduceStock(Integer id, Integer quantity);
+
+    void addStock(Integer id, Integer quantity);
 }
 

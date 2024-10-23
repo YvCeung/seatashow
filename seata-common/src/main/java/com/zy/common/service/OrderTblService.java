@@ -1,12 +1,13 @@
-package com.zy.order.service;
+package com.zy.common.service;
 
-import com.zy.order.entity.OrderTbl;
+
+import com.zy.common.bo.OrderTblDO;
 
 /**
  * (OrderTbl)表服务接口
  *
- * @author makejava
- * @since 2024-10-22 23:18:44
+ * @author xiaoyuer
+ * @since 2024-10-23 22:48:18
  */
 public interface OrderTblService {
 
@@ -16,23 +17,24 @@ public interface OrderTblService {
      * @param id 主键
      * @return 实例对象
      */
-    OrderTbl queryById(Integer id);
+    OrderTblDO queryById(Integer id);
+
 
     /**
      * 新增数据
      *
-     * @param orderTbl 实例对象
+     * @param orderTblDO 实例对象
      * @return 实例对象
      */
-    OrderTbl insert(OrderTbl orderTbl);
+    OrderTblDO createOrder(OrderTblDO orderTblDO);
 
     /**
      * 修改数据
      *
-     * @param orderTbl 实例对象
+     * @param orderTblDO 实例对象
      * @return 实例对象
      */
-    OrderTbl update(OrderTbl orderTbl);
+    OrderTblDO update(OrderTblDO orderTblDO);
 
     /**
      * 通过主键删除数据
