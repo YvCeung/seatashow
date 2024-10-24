@@ -49,6 +49,6 @@ public interface StockTblService {
      * @param id
      * @param number
      */
-    void reduceStockWithError(Integer id,Integer number);
+    void reduceStock(Integer id,Integer number);
 
 }

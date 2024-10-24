@@ -44,6 +44,13 @@ public class OrderTblServiceImpl implements OrderTblService {
         return orderTblDO;
     }
 
+    @Override
+    public OrderTblDO createOrderWithError(OrderTblDO orderTblDO) {
+        int res = 1 / 0;
+        this.orderTblDao.insert(orderTblDO);
+        return orderTblDO;
+    }
+
     /**
      * 修改数据
      *

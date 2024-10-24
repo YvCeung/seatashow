@@ -68,7 +68,7 @@ public class StockTblServiceImpl implements StockTblService {
     }
 
     @Override
-    public void reduceStockWithError(Integer id, Integer number) {
+    public void reduceStock(Integer id, Integer number) {
         StockTblDO stockTblDO = stockTblDao.queryById(id);
         if(stockTblDO.getCount() < number){
             //模拟异常

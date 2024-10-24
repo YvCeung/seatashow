@@ -28,6 +28,8 @@ public interface OrderTblService {
      */
     OrderTblDO createOrder(OrderTblDO orderTblDO);
 
+    OrderTblDO createOrderWithError(OrderTblDO orderTblDO);
+
     /**
      * 修改数据
      *

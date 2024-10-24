@@ -24,37 +24,42 @@ public class OrderController {
     private OrderTblService orderTblService;
 
 
-    @GetMapping("/createOrder")
+    @GetMapping("/createOrderRandom")
     @Transactional
     public String createOrder(@RequestParam("id") Integer productId,
                               @RequestParam("number")Integer number){
-        //创建订单(本系统)
+
+        //先创建订单(本系统)
         OrderTblDO orderTblDO = new OrderTblDO();
         orderTblDO.setCount(number);
         orderTblDO.setMoney(number * 100);
         orderTblDO.setCommodityCode("C00321");
         orderTblDO.setUserId("123456");
         OrderTblDO order = orderTblService.createOrder(orderTblDO);
+        //在扣减库存
+        stockTblService.reduceStock(productId,number);
         //失败，预期会回滚
-        stockTblService.reduceStockWithError(productId,number);
         return "success";
     }
 
-    @GetMapping("/createOrder2")
+    @GetMapping("/createOrderFail")
     @Transactional
     public String createOrder2(@RequestParam("id") Integer productId,
                               @RequestParam("number")Integer number){
 
-        //成功扣减
-        stockTblService.reduceStockWithError(productId,number);
+        //先扣减库存(保证扣减成功)
+        stockTblService.reduceStock(productId,number);
 
-        //创建订单(本系统)
+        //在创建订单(本系统)
         OrderTblDO orderTblDO = new OrderTblDO();
         orderTblDO.setCount(number);
         orderTblDO.setMoney(number * 100);
         orderTblDO.setCommodityCode("C00321");
         orderTblDO.setUserId("123456");
+
+        //成功创建
         OrderTblDO order = orderTblService.createOrder(orderTblDO);
+        //失败，预期会回滚
         int res = 1 / 0;
         return "success";
     }
