@@ -21,6 +21,7 @@
         <mybatis.version>3.0.3</mybatis.version>
         <mysql.jdbc.version>8.0.27</mysql.jdbc.version>
         <druid.datasource.version>1.2.20</druid.datasource.version>
+        <seata.client.version>2.1.0</seata.client.version>
     </properties>
 
     <parent>
@@ -89,6 +90,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.datasource.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.client.version}</version>
             </dependency>
 
         </dependencies>

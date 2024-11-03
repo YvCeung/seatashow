@@ -4,6 +4,7 @@ import com.zy.common.bo.OrderTblDO;
 import com.zy.common.service.StockTblService;
 import com.zy.common.service.OrderTblService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -43,7 +44,7 @@ public class OrderController {
     }
 
     @GetMapping("/createOrderFail")
-    @Transactional
+    @GlobalTransactional
     public String createOrder2(@RequestParam("id") Integer productId,
                               @RequestParam("number")Integer number){
 
