@@ -4,7 +4,6 @@ import com.zy.common.bo.StockTblDO;
 import com.zy.storage.dao.StockTblDao;
 import com.zy.common.service.StockTblService;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.springframework.stereotype.Service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

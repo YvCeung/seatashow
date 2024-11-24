@@ -40,7 +40,7 @@ public class OrderController {
         //在扣减库存
         stockTblService.reduceStock(productId,number);
         //失败，预期会回滚
-        return "success";
+        return "success1";
     }
 
     @GetMapping("/createOrderFail")
