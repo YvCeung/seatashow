@@ -13,8 +13,12 @@ seata:
   registry:
     type: nacos
     nacos:
+      #server端注册到Nacos上的应用名称，需要保持一致
+      #这里作为seata客户端链接到注册中心拉去server端在nacos上的节点信息
       application: seata-server
       server-addr: 127.0.0.1:8848
+      #分组名，需要与server端保持一致
       group: seata
       cluster: default
+#      需要与server端保持一致
       namespace: 3688929d-ed43-484d-b01c-1de748697ea4
