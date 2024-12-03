@@ -1,9 +1,8 @@
 package com.zy.common.seataclient.storage.dao;
 
-import com.zy.common.bo.StockTblDO;
+import com.zy.common.api.bo.StockTblDO;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
 
 /**
  * (StockTbl)表数据库访问层

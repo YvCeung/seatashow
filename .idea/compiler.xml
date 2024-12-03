@@ -17,6 +17,7 @@
         </processorPath>
         <module name="common-api" />
         <module name="seata-order" />
+        <module name="common-seataclient" />
         <module name="seata-storage" />
       </profile>
     </annotationProcessing>
@@ -27,6 +28,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-api" options="-parameters" />
+      <module name="common-seataclient" options="-parameters" />
       <module name="seata-common" options="-parameters" />
       <module name="seata-order" options="-parameters" />
       <module name="seata-storage" options="-parameters" />

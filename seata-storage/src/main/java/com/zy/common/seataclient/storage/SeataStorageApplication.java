@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {"com.zy.storage"})
 @EnableDubbo
-@MapperScan("com.zy.storage.dao")
+@MapperScan("com.zy.storage.")
 public class SeataStorageApplication {
 
     public static void main(String[] args) {
