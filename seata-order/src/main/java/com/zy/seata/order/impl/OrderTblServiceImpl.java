@@ -1,8 +1,8 @@
-package com.zy.common.seataclient.order.service.impl;
+package com.zy.seata.order.impl;
 
-import com.zy.common.bo.OrderTblDO;
-import com.zy.common.seataclient.order.dao.OrderTblDao;
-import com.zy.common.service.OrderTblService;
+import com.zy.common.api.bo.OrderTblDO;
+import com.zy.common.api.service.OrderTblService;
+import com.zy.seata.order.dao.OrderTblDao;
 import org.apache.dubbo.config.annotation.DubboService;
 
 

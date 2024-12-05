@@ -1,10 +1,11 @@
-package com.zy.common.seataclient.order.dao;
+package com.zy.seata.order.dao;
 
-import com.zy.common.bo.OrderTblDO;
+import com.zy.common.api.bo.OrderTblDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+
 
 /**
  * (OrderTbl)表数据库访问层

@@ -1,6 +1,7 @@
 package com.zy.common.seataclient.order.dao;
 
-import com.zy.common.bo.OrderTblDO;
+import com.zy.common.api.bo.OrderTblDO;
+import com.zy.seata.order.dao.OrderTblDao;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

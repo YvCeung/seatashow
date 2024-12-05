@@ -1,8 +1,8 @@
-package com.zy.common.seataclient.order.controller;
+package com.zy.seata.order.controller;
 
-import com.zy.common.bo.OrderTblDO;
-import com.zy.common.service.StockTblService;
-import com.zy.common.service.OrderTblService;
+import com.zy.common.api.bo.OrderTblDO;
+import com.zy.common.api.service.OrderTblService;
+import com.zy.common.api.service.StockTblService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
