@@ -1,13 +1,13 @@
-package com.zy.common.seataclient.storage;
+package com.zy.seata.storage;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.zy.storage"})
+@SpringBootApplication(scanBasePackages = {"com.zy.seata.storage"})
 @EnableDubbo
-@MapperScan("com.zy.storage.")
+@MapperScan("com.zy.seata.storage.dao")
 public class SeataStorageApplication {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package com.zy.common.seataclient.order.dao;
 
-import com.zy.SeataOrderApplication;
+import com.zy.seata.order.SeataOrderApplication;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

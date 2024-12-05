@@ -1,4 +1,4 @@
-package com.zy.common.seataclient.storage;
+package com.zy.seata.storage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

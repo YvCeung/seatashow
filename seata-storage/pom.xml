@@ -105,7 +105,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.zy.common.seataclient.storage.SeataStorageApplication</mainClass>
+                    <mainClass>com.zy.seata.storage.SeataStorageApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

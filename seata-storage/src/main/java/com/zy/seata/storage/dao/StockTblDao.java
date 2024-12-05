@@ -1,4 +1,4 @@
-package com.zy.common.seataclient.storage.dao;
+package com.zy.seata.storage.dao;
 
 import com.zy.common.api.bo.StockTblDO;
 import org.apache.ibatis.annotations.Param;

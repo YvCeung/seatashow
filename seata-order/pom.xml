@@ -115,7 +115,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.zy.SeataOrderApplication</mainClass>
+                    <mainClass>com.zy.seata.order.SeataOrderApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

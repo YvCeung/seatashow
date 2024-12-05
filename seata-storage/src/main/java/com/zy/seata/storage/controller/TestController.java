@@ -1,4 +1,4 @@
-package com.zy.common.seataclient.storage.controller;
+package com.zy.seata.storage.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

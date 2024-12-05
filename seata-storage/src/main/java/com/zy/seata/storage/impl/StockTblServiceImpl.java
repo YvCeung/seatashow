@@ -1,8 +1,8 @@
-package com.zy.common.seataclient.storage.service.impl;
+package com.zy.seata.storage.impl;
 
 import com.zy.common.api.bo.StockTblDO;
 import com.zy.common.api.service.StockTblService;
-import com.zy.common.seataclient.storage.dao.StockTblDao;
+import com.zy.seata.storage.dao.StockTblDao;
 import org.apache.dubbo.config.annotation.DubboService;
 
 
