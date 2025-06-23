@@ -1,7 +1,7 @@
 package com.zy.common.api.service;
 
 
-import com.zy.common.api.bo.StockTblDO;
+import com.zy.common.api.bo.BpmStorage;
 
 /**
  * (StockTbl)表服务接口
@@ -17,24 +17,24 @@ public interface StockTblService {
      * @param id 主键
      * @return 实例对象
      */
-    StockTblDO queryById(Integer id);
+    BpmStorage queryById(Integer id);
 
 
     /**
      * 新增数据
      *
-     * @param stockTblDO 实例对象
+     * @param BpmStorage 实例对象
      * @return 实例对象
      */
-    StockTblDO insert(StockTblDO stockTblDO);
+    BpmStorage insert(BpmStorage BpmStorage);
 
     /**
      * 修改数据
      *
-     * @param stockTblDO 实例对象
+     * @param BpmStorage 实例对象
      * @return 实例对象
      */
-    StockTblDO update(StockTblDO stockTblDO);
+    BpmStorage update(BpmStorage BpmStorage);
 
     /**
      * 通过主键删除数据
