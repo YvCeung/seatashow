@@ -22,6 +22,8 @@ public interface StockTblDao {
      */
     StockTblDO queryById(Integer id);
 
+    StockTblDO queryByCode(String commodityCode);
+
     /**
      * 统计总行数
      *

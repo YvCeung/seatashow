@@ -75,4 +75,17 @@ public class StockTblServiceImpl implements StockTblService {
         }
         stockTblDao.reduceStock(id,number);
     }
+
+    @Override
+    public boolean reduceStockByCode(String commodityCode, Integer number) {
+        StockTblDO stockTblDO = stockTblDao.queryByCode(commodityCode);
+        Integer stockCount = stockTblDO.getCount();
+
+        if(stockCount < number){
+            throw new RuntimeException("库存不足，扣减失败。待扣减库存:" + number + "真实库存:" + stockCount);
+        }
+
+        stockTblDao.reduceStock(stockTblDO.getId(),number);
+        return true;
+    }
 }

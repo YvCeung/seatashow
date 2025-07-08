@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zy.seata.storage.dao.StockTblDao">
 
-    <resultMap type="bo.com.zy.common.api.StockTblDO" id="StockTblDOMap">
+    <resultMap type="com.zy.common.api.bo.StockTblDO" id="StockTblDOMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="commodityCode" column="commodity_code" jdbcType="VARCHAR"/>
         <result property="count" column="count" jdbcType="INTEGER"/>
@@ -15,6 +15,14 @@
                count
         from stock_tbl
         where id = #{id}
+    </select>
+
+    <select id="queryByCode" resultMap="StockTblDOMap">
+        select id,
+               commodity_code,
+               count
+        from stock_tbl
+        where commodity_code = #{commodityCode}
     </select>
 
     <!--统计总行数-->

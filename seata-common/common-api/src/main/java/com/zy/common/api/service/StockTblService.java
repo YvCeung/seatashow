@@ -51,4 +51,6 @@ public interface StockTblService {
      */
     void reduceStock(Integer id,Integer number);
 
+    boolean reduceStockByCode(String commodityCode, Integer number);
+
 }
