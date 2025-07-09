@@ -58,7 +58,7 @@ public class OrderController {
         return "success1";
     }
 
-    @GetMapping("/createOrderFail")
+    @GetMapping("/createOrderWithReduceStock")
     @GlobalTransactional
     public String createOrder2(@RequestParam("commodityCode") String commodityCode,
                                @RequestParam("number")Integer number){
@@ -81,6 +81,18 @@ public class OrderController {
         boolean reduceRes = stockTblService.reduceStockByCode(commodityCode, number);
         log.info("库存扣减结果 :{}", reduceRes);
         return "success";
+    }
+
+    @GetMapping("/reduceStockWithCreateOrder")
+    @GlobalTransactional
+    public String reduceStockWithCreateOrder(@RequestParam("commodityCode") String commodityCode,
+                               @RequestParam("number")Integer number){
+
+
+        //先扣减库存(保证扣减成功)
+        boolean reduceRes = stockTblService.reduceStockByCode(commodityCode, number);
+        log.info("库存扣减结果 :{}", reduceRes);
+        throw new RuntimeException("模拟创建订单异常");
     }
 
     @PostConstruct
