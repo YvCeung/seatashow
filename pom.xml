@@ -19,7 +19,7 @@
         <spring-cloud-alibaba.version>2023.0.1.2</spring-cloud-alibaba.version>
         <dubbo.version>3.2.10</dubbo.version>
         <mybatis.version>3.0.3</mybatis.version>
-        <mysql.jdbc.version>8.0.27</mysql.jdbc.version>
+        <dmdb.version>8.1.1</dmdb.version>
         <druid.datasource.version>1.2.20</druid.datasource.version>
         <seata.client.version>2.2.0</seata.client.version>
     </properties>
@@ -78,12 +78,13 @@
                 <version>${mybatis.version}</version>
             </dependency>
 
-            <!-- MySQL JDBC 驱动 -->
+            <!-- DM JDBC 驱动 -->
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.jdbc.version}</version>
+                <groupId>com.dameng</groupId>
+                <artifactId>DmJdbcDriver18</artifactId>
+                <version>8.1.1.193</version>
             </dependency>
+
 
             <!-- Druid 数据库连接池 -->
             <dependency>

@@ -8,6 +8,7 @@
         <result property="commodityCode" column="commodity_code" jdbcType="VARCHAR"/>
         <result property="count" column="count" jdbcType="INTEGER"/>
         <result property="money" column="money" jdbcType="INTEGER"/>
+        <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <!--查询单个-->
@@ -16,7 +17,8 @@
                user_id,
                commodity_code,
                count,
-               money
+               money,
+               createdTime
         from order_tbl
         where id = #{id}
     </select>

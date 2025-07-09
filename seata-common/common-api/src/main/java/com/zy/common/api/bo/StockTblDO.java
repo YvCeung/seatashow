@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @author xiaoyuer
@@ -28,6 +29,8 @@ public class StockTblDO implements Serializable {
     private String commodityCode;
 
     private Integer count;
+
+    private LocalDateTime createdTime;
 
 
 }

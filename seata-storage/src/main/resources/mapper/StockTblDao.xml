@@ -6,13 +6,15 @@
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="commodityCode" column="commodity_code" jdbcType="VARCHAR"/>
         <result property="count" column="count" jdbcType="INTEGER"/>
+        <result property="createdTime" column="updated_at" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="StockTblDOMap">
         select id,
                commodity_code,
-               count
+               count,
+               updated_at
         from stock_tbl
         where id = #{id}
     </select>

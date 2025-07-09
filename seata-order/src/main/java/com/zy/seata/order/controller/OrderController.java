@@ -36,6 +36,7 @@ public class OrderController {
 
     @GetMapping("/healthcheck")
     public String healthcheck(){
+        OrderTblDO orderTblDO = orderTblService.queryById(1);
         return "health";
     }
 
