@@ -3,24 +3,24 @@
 <mapper namespace="com.zy.seata.order.dao.OrderTblDao">
 
     <resultMap type="com.zy.common.api.bo.OrderTblDO" id="OrderTblDOMap">
-        <result property="id" column="id" jdbcType="INTEGER"/>
-        <result property="userId" column="user_id" jdbcType="VARCHAR"/>
-        <result property="commodityCode" column="commodity_code" jdbcType="VARCHAR"/>
-        <result property="count" column="count" jdbcType="INTEGER"/>
-        <result property="money" column="money" jdbcType="INTEGER"/>
-        <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="userId" column="USER_ID" jdbcType="VARCHAR"/>
+        <result property="commodityCode" column="COMMODITY_CODE" jdbcType="VARCHAR"/>
+        <result property="count" column="COUNT" jdbcType="INTEGER"/>
+        <result property="money" column="MONEY" jdbcType="INTEGER"/>
+        <result property="createdTime" column="CREATED_AT" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="OrderTblDOMap">
-        select id,
-               user_id,
-               commodity_code,
-               count,
-               money,
-               createdTime
-        from order_tbl
-        where id = #{id}
+        select ID,
+               USER_ID,
+               COMMODITY_CODE,
+               COUNT,
+               MONEY,
+               CREATED_AT
+        from ORDER_TBL
+        where ID = #{id}
     </select>
 
     <!--统计总行数-->

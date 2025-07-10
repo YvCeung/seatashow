@@ -1,7 +1,10 @@
 package com.zy.common.api.bo;
 
 import java.io.Serializable;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
@@ -34,7 +37,7 @@ public class OrderTblDO implements Serializable {
 
     private Integer money;
 
-    private LocalDateTime createdTime; // 新增字段，对应数据库的 TIMESTAMP(6)
+    private Timestamp createdTime; // 新增字段，对应数据库的 TIMESTAMP(6)
 
 
 }

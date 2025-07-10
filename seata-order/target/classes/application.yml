@@ -18,8 +18,8 @@ spring:
   config:
     import: classpath:seata.yml
   datasource:
-    url: jdbc:dm://127.0.0.1:5236/BPM3
-    username: SYSDBA
+    url: jdbc:dm://127.0.0.1:5236/
+    username: BPM3
     password: Bpm3@123456
     driver-class-name: dm.jdbc.driver.DmDriver
     type: com.alibaba.druid.pool.DruidDataSource
